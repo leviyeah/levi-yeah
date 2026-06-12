@@ -1361,66 +1361,60 @@ height:26px;
 margin:0;
 }
 
-/* GALERIA */
+/* GALERIA AUTOMATICA */
+
 .polaroid-wall{
-position:relative;
 width:100%;
-max-width:390px;
-min-height:620px;
-margin-top:25px;
+max-width:1200px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:42px;
+margin-top:60px;
+padding:20px;
 }
 
 .polaroid{
-position:absolute;
-width:145px;
-padding:9px 9px 30px;
+width:240px;
+background:white;
+padding:14px 14px 45px;
+box-shadow:0 18px 35px rgba(0,0,0,.16);
+border:1px solid rgba(0,0,0,.08);
+cursor:pointer;
+transition:.35s ease;
+position:relative;
+}
+
+.polaroid:hover{
+transform:scale(1.06) rotate(0deg) !important;
+z-index:10;
 }
 
 .polaroid img{
-height:145px;
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
 }
 
-.polaroid-1{
-top:0;
-left:10px;
-transform:rotate(-8deg);
+.polaroid:nth-child(odd){
+transform:rotate(-4deg);
 }
 
-.polaroid-2{
-top:45px;
-right:5px;
-left:auto;
-transform:rotate(7deg);
+.polaroid:nth-child(even){
+transform:rotate(4deg);
 }
 
-.polaroid-3{
-top:160px;
-left:auto;
-right:200px;
-transform:rotate(5deg);
-}
-
-.polaroid-4{
-top:295px;
-right:20px;
-left:auto;
+.polaroid:nth-child(3n){
 transform:rotate(-7deg);
 }
 
-.polaroid-5{
-top:450px;
-left:140px;
-right:auto;
-transform:rotate(3deg);
-}
-.polaroid-6{
-top:340px;
-right:200px;
-left:auto;
-transform:rotate(-12deg);
+.polaroid:nth-child(5n){
+transform:rotate(8deg);
 }
 
 /* FOTO ABIERTA */
+
 .photo-modal{
 max-width:94%;
 padding:16px 16px 30px;
@@ -1440,6 +1434,7 @@ font-size:.85rem;
 }
 
 /* CONTACTO */
+
 .contact-board{
 position:relative;
 width:100%;
@@ -1492,8 +1487,7 @@ bottom:5px;
 transform:rotate(6deg);
 }
 
-}
-/* FIX URGENTE MODAL COMPRA MOVIL */
+/* FIX MODAL COMPRA MOVIL */
 
 @media(max-width:768px){
 
@@ -1550,91 +1544,163 @@ display:block !important;
 width:100% !important;
 }
 
-}
-
 .active-size{
 background:black !important;
 color:white !important;
 }
 
-/* AJUSTES MOVIL LEVI YEAH */
+/* GALERIA AUTOMATICA MOVIL */
+
+.polaroid-wall{
+display:flex !important;
+flex-wrap:wrap !important;
+justify-content:center !important;
+gap:24px !important;
+width:100% !important;
+max-width:390px !important;
+min-height:auto !important;
+margin-top:30px !important;
+padding:10px !important;
+}
+
+.polaroid{
+position:relative !important;
+width:145px !important;
+padding:9px 9px 30px !important;
+}
+
+.polaroid img{
+width:100% !important;
+height:145px !important;
+object-fit:cover !important;
+}
+
+/* CONTACTO MOVIL */
+
+.contact-board{
+position:relative;
+width:100%;
+min-height:620px;
+margin-top:20px;
+display:block;
+}
+
+.contact-drawing{
+position:absolute;
+width:330px;
+max-width:95%;
+left:50%;
+top:120px;
+transform:translateX(-50%);
+}
+
+.postit{
+position:absolute;
+width:180px;
+min-height:190px;
+padding:20px 16px;
+gap:10px;
+}
+
+.postit-left{
+top:0;
+left:5px;
+transform:rotate(-6deg);
+}
+
+.postit-right{
+right:4px;
+bottom:5px;
+transform:rotate(6deg);
+}
+
+}
+}
+/* FIX FINAL GALERIA AUTOMATICA */
+
+.polaroid-wall{
+display:flex !important;
+flex-wrap:wrap !important;
+justify-content:center !important;
+align-items:flex-start !important;
+gap:42px !important;
+width:100% !important;
+max-width:1200px !important;
+min-height:auto !important;
+position:relative !important;
+margin-top:60px !important;
+padding:20px !important;
+}
+
+.polaroid{
+position:relative !important;
+top:auto !important;
+left:auto !important;
+right:auto !important;
+bottom:auto !important;
+width:240px !important;
+background:white !important;
+padding:14px 14px 45px !important;
+}
+
+.polaroid img{
+width:100% !important;
+height:240px !important;
+object-fit:cover !important;
+display:block !important;
+}
 
 @media(max-width:768px){
 
-/* NAVBAR */
-
-.navbar{
-padding:14px 16px !important;
+.polaroid-wall{
+gap:24px !important;
+max-width:390px !important;
+margin-top:30px !important;
+padding:10px !important;
 }
 
-.navbar img{
-width:52px !important;
+.polaroid{
+width:145px !important;
+padding:9px 9px 30px !important;
 }
 
-.nav-links{
-display:flex !important;
-gap:12px !important;
-justify-content:flex-end !important;
-align-items:center !important;
-flex-wrap:wrap !important;
-max-width:260px !important;
+.polaroid img{
+height:145px !important;
 }
 
-.nav-links a{
-font-size:.58rem !important;
-letter-spacing:1.3px !important;
-white-space:nowrap !important;
+}
+/* COLLAGE AUTOMATICO */
+
+.polaroid{
+position:relative !important;
+transition:.35s ease;
 }
 
-/* APARTADOS DEL INICIO COMO ANTES */
-
-.hero-buttons{
-display:flex !important;
-flex-direction:row !important;
-align-items:center !important;
-justify-content:center !important;
-flex-wrap:wrap !important;
-gap:18px 26px !important;
-margin-top:45px !important;
+.polaroid:nth-child(odd){
+transform:rotate(-6deg);
 }
 
-.hero-buttons a{
-font-size:.82rem !important;
-letter-spacing:4px !important;
-font-weight:700 !important;
-text-decoration:none !important;
+.polaroid:nth-child(even){
+transform:rotate(5deg);
 }
 
-.hero-buttons a::before{
-content:"" !important;
+.polaroid:nth-child(3n){
+transform:rotate(-10deg) translateY(25px);
 }
 
-.hero-buttons a::after{
-content:" /" !important;
-margin-left:8px !important;
-opacity:.45 !important;
+.polaroid:nth-child(4n){
+transform:rotate(8deg) translateY(-20px);
 }
 
-/* CONTACTO */
-
-.contact-drawing{
-width:430px !important;
-max-width:none !important;
+.polaroid:nth-child(5n){
+transform:rotate(-12deg) translateY(15px);
 }
 
-/* POSTIT IZQUIERDO */
-
-.postit-left{
-top:35px !important;
-left:12px !important;
+.polaroid:nth-child(6n){
+transform:rotate(12deg) translateY(-15px);
 }
 
-/* POSTIT DERECHO */
-
-.postit-right{
-right:12px !important;
-bottom:40px !important;
-transform:rotate(6deg) !important;
-}
-
+.polaroid:hover{
+transform:scale(1.08) rotate(0deg) !important;
+z-index:20;
 }

@@ -31,6 +31,19 @@ import gallery3 from './assets/galeria/3.jpeg'
 import gallery4 from './assets/galeria/4.jpeg'
 import gallery5 from './assets/galeria/5.jpeg'
 import gallery6 from './assets/galeria/6.jpeg'
+import gallery7 from './assets/galeria/7.jpeg'
+import gallery8 from './assets/galeria/8.jpeg'
+import gallery9 from './assets/galeria/9.jpeg'
+import gallery11 from './assets/galeria/11.jpeg'
+import gallery12 from './assets/galeria/12.jpeg'
+import gallery13 from './assets/galeria/13.jpeg'
+import gallery14 from './assets/galeria/14.jpeg'
+import gallery15 from './assets/galeria/15.jpeg'
+import gallery16 from './assets/galeria/16.jpeg'
+import gallery17 from './assets/galeria/17.jpeg'
+import gallery18 from './assets/galeria/18.jpeg'
+import gallery19 from './assets/galeria/19.jpeg'
+import gallery20 from './assets/galeria/20.jpeg'
 
 import mono from './assets/contacto/mono.jpeg'
 
@@ -87,6 +100,71 @@ const galleryPhotos = [
     image: gallery6,
     title: 'MOMENTO 006',
     text: 'si llegan a ver mis stikers, me etiquetan'
+  },
+  {
+  image: gallery7,
+  title: 'MOMENTO 007',
+  text: 'enebea'
+  },
+  {
+  image: gallery8,
+  title: 'MOMENTO 008',
+  text: 'es hermoso en persona Larry'
+  },
+  {
+  image: gallery9,
+  title: 'MOMENTO 009',
+  text: 'como q no me doy cuenta'
+  },
+  {
+  image: gallery11,
+  title: 'MOMENTO 011',
+  text: 'mi lugar seguro'
+  },
+  {
+  image: gallery12,
+  title: 'MOMENTO 012',
+  text: 'vandalizando el metro de la cdmx'
+  },
+  {
+  image: gallery13,
+  title: 'MOMENTO 013',
+  text: 'jesucito4'
+  },
+  {
+  image: gallery14,
+  title: 'MOMENTO 014',
+  text: 'jesucito trae la gamaaa'
+  },
+  {
+  image: gallery15,
+  title: 'MOMENTO 015',
+  text: 'yo'
+  },
+  {
+  image: gallery16,
+  title: 'MOMENTO 016',
+  text: 'leviyeah'
+  },
+  {
+  image: gallery17,
+  title: 'MOMENTO 017',
+  text: 'duroo'
+  },
+  {
+  image: gallery18,
+  title: 'MOMENTO 018',
+  text: 'si lo ven me avisan'
+  },
+  {
+  image: gallery19,
+  title: 'MOMENTO 019',
+  text: 'leviyeah'
+  },
+  {
+  image: gallery20,
+  title: 'MOMENTO 020',
+  text: 'custom en la bici del chino'
   }
 ]
 function App() {
@@ -423,7 +501,7 @@ src={currentSong.audio}
 {galleryPhotos.map((photo,index)=>(
 
 <div
-className={`polaroid polaroid-${index + 1}`}
+className="polaroid"
 key={index}
 onClick={()=>setSelectedPhoto(photo)}>
 <img src={photo.image} alt={photo.title}/>
