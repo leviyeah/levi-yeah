@@ -74,7 +74,7 @@ const galleryPhotos = [
   {
     image: gallery1,
     title: 'MOMENTO 001',
-    text: '  '
+    text: 'ese stiker lo pego mi mujer <3'
   },
   {
     image: gallery2,
